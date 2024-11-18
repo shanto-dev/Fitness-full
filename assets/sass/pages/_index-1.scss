@@ -1,0 +1,192 @@
+// About Style 
+.gm_about_section {
+    position: relative;
+    overflow: hidden;
+
+    &__body {
+        & p {
+            margin-bottom: 48px;
+            max-width: 520px;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+        }
+    }
+
+    & .gm_stretch_Img {
+        position: relative;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+
+            @include large-screen {
+                min-height: 460px;
+            }
+        }
+    }
+}
+
+// Video Popup 
+.gm_video_popup_sec {
+    position: relative;
+}
+
+.gm_video_playBtnWrapp {
+    padding: 205px 0;
+}
+
+.gm_video_playBtn {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 52px;
+    text-align: left;
+    font-family: var(--heading-font);
+    color: var(--white-color);
+    @include displayFlex(flex, center, center, column);
+    width: 160px;
+    height: 160px;
+    text-transform: uppercase;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 0.4s all;
+
+    &:hover {
+        border-color: var(--secondary-color);
+        color: var(--secondary-color);
+        transform: scale(.95)
+    }
+}
+
+.gm_video_playBtn+span {
+    display: none;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    max-width: 1290px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    font-size: 34px;
+    line-height: 1;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    cursor: pointer;
+    z-index: 10000;
+    border: 1px solid var(--secondary-color);
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    @include displayFlex(flex, center, center, column);
+
+    &:hover {
+        color: var(--white-color);
+    }
+}
+
+
+
+/*********************** ticker section start ******************/
+.ur-ticker-wrapper {
+    box-sizing: content-box;
+    width: 100%;
+    padding-left: 100%;
+    .ur-ticker {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 26px 0;
+        animation: 30s ticker linear infinite;
+        box-sizing: content-box;
+        padding-right: 100%;
+        span {
+            font-size: 18px;
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+            transition: var(--transition-base);
+            + span {
+                margin-left: 120px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -80px;
+                    width: 40px;
+                    height: 1px; 
+                    background-color: var(--white-color);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: var(--transition-base);
+                }
+            }
+            &:hover {
+                transform: translateY(-6px);
+                &::before {
+                    top: calc(50% + 6px);
+                }
+            }
+        }
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+}
+
+// Feature Product Slider
+.gm_featured_arrow {
+    gap: 12px;
+    button {
+        background: transparent;
+        border: 0;
+        outline: 0;
+        font-size: 16px;
+        color: var(--text-color);
+        -webkit-transition: var(--transition-base);
+        -o-transition: var(--transition-base);
+        transition: var(--transition-base);
+        position: relative;
+    }
+    .gmFeature-button-prev::after {
+        content: '';
+        position: absolute;
+        right: -7px;
+        top: 3px;
+        width: 1px;
+        height: 16px;
+        background: #74787C;
+        opacity: 0.2;
+    }
+}
+.gm-arrow-top {
+    @include screen-768 {
+        display: none !important;
+    }
+}
+.gm-arrow-bottom {
+    display: none !important;
+    @include screen-768 {
+        display: inline-flex !important;
+        width: 100%;
+    }
+}

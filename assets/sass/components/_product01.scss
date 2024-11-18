@@ -1,0 +1,206 @@
+.nCollection01_Row {
+    &>.col-xl-6 {
+        @include large-screen {
+            order: 1;
+        }
+    }
+}
+
+// Product 01 
+.gm_productItem01 {
+    position: relative;
+}
+
+.gm_pd01Thumb {
+    width: 100%;
+    height: 340px;
+    background: var(--color-shade-background);
+    @include displayFlex(flex, center, center, column);
+    margin-bottom: 16px;
+    overflow: hidden;
+    position: relative;
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: 0.4s all;
+    }
+    & img:nth-child(2){
+        opacity: 0;
+        position: absolute;
+        visibility: hidden
+    }
+    &:hover{
+        & img:nth-child(1){
+            opacity: 0;
+            visibility: hidden
+        }
+        & img:nth-child(2){
+            opacity: 1;
+            visibility: visible
+        }
+    }
+}
+
+
+.gm_productLabels {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    & .pdNew {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        background: var(--secondary-color);
+        color: var(--white-color);
+        padding: 2px 8px;
+        text-transform: uppercase;
+    }
+}
+
+.gm_pd01Actions {
+    position: absolute;
+    bottom: -10px;
+    right: 16px;
+    @include displayFlex(inline-flex, start, center, column);
+    gap: 10px;
+    transition: 0.3s all;
+
+    & a {
+        width: 48px;
+        height: 48px;
+        @include displayFlex(flex, center, center, column);
+        background: var(--primary-color);
+        opacity: 0;
+        visibility: hidden;
+
+        & i {
+            font-size: 19px;
+            color: var(--white-color);
+        }
+
+        & svg {
+            fill: var(--white-color);
+
+            & path {
+                fill: var(--white-color);
+                stroke-width: 0.2px;
+                stroke: var(--white-color);
+            }
+        }
+
+        &:hover {
+            background: var(--secondary-color);
+        }
+    }
+}
+
+.gm_productItem01:hover {
+    & .gm_pd01Actions {
+        bottom: 16px;
+
+        & a {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.gm_pd01Details {
+    & h2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: left;
+        margin-bottom: 8px;
+
+        & a {
+            color: inherit;
+            font-family: inherit;
+
+            &:hover {
+                color: var(--secondary-color)
+            }
+        }
+    }
+}
+
+
+.gm_pd01PricRevw_wrap {
+    @include displayFlex(flex, space-between, center, row);
+}
+
+.gm_pd01Price {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    color: var(--color-heading);
+    @include displayFlex(inline-flex, space-between, center, row);
+
+    & ins {
+        margin-right: 8px;
+        text-decoration: none;
+    }
+
+    & del {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        color: var(--text-color);
+    }
+}
+
+.gm_pd01Reviws {
+
+    position: relative;
+
+    & .star-rating {
+        position: relative;
+        @include displayFlex(inline-flex, start, center, row);
+        gap: 2px;
+
+        & svg {
+            fill: var(--color-yellow);
+            width: 20px;
+            height: 20px;
+
+            & path {
+                fill: var(--color-yellow);
+            }
+        }
+
+        & p {
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 91.2%;
+            height: 100%;
+
+            & .fillSvg {
+                min-width: 108px;
+                @include displayFlex(inline-flex, start, center, row);
+                top: 0;
+                left: 0;
+                position: absolute;
+                gap: 2px;
+                flex-wrap: nowrap;
+            }
+
+            & svg {
+                width: 20px;
+                height: 20px;
+                fill: var(--color-yellow);
+
+                & path {
+                    fill: var(--color-yellow);
+                }
+            }
+        }
+
+    }
+}

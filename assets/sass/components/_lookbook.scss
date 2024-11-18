@@ -1,0 +1,735 @@
+// LookBook 
+.lookbookLink {
+    position: relative;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    @include displayFlex(inline-flex, center, center, row);
+    gap: 8px;
+
+    & svg {
+        padding: 4px;
+        width: 24px;
+        height: 24px;
+        fill: var(--secondary-color);
+        transition: 0.3s all;
+
+        & path {
+            stroke-width: .6px;
+            stroke: var(--secondary-color);
+            fill: var(--secondary-color);
+            transition: 0.3s all;
+        }
+    }
+
+    &:hover {
+        color: var(--white-color);
+
+        & svg {
+            fill: var(--white-color);
+
+            & path {
+                fill: var(--white-color);
+                stroke: var(--white-color);
+            }
+        }
+    }
+}
+
+// Lookbook 01 
+.gm_lookbook01 {
+    position: relative;
+    background: var(--color-lookbook-bg);
+    @include displayFlex(flex, start, start, row);
+
+    @include screen-768 {
+        flex-direction: column;
+    }
+
+    &__img {
+        flex: 0 0 auto;
+        width: 280px;
+        background-image: url(../images/lookbook/lookbook-01-shape.png);
+        background-size: auto;
+        background-position: bottom 23px right 96px;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 158px;
+            height: 158px;
+            top: 24px;
+            right: 38px;
+            border-radius: 50%;
+            background: #F4D6B2;
+            z-index: -1;
+
+            @include screen-768 {}
+        }
+
+        & img {
+
+            @include screen-768 {
+                text-align: center;
+            }
+        }
+
+        @include screen-768 {
+            margin: 0 auto;
+            margin-left: 50%;
+            transform: translateX(-58%);
+        }
+    }
+
+    &__content {
+        padding: 49px 40px 50px 50px;
+
+        @include screen-768 {
+            padding: 49px 20px 50px;
+        }
+
+        & h4 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 31px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        & h2 {
+            font-size: 56px;
+            font-weight: 600;
+            line-height: 73px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+
+            @include screen-768 {
+                font-size: 42px;
+                line-height: 59px;
+            }
+        }
+
+        & .gm_primary-btn {
+            margin-top: 40px;
+            padding: 16px 20px 15px;
+            gap: 8px;
+
+            & i {
+                font-size: 16px;
+                top: -1px;
+                position: relative;
+            }
+        }
+    }
+}
+
+.gm_lookbookPrice {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    color: var(--text-color);
+    display: block;
+}
+
+// Lookbook 02 
+.gm_lookbook02 {
+    position: relative;
+    background: var(--primary-color);
+
+    &__content {
+        padding: 40px 40px 24px;
+
+        & h4 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            color: var(--color-yellow);
+            text-transform: uppercase;
+            font-family: var(--body-font);
+            margin-bottom: 4px;
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            text-transform: uppercase;
+            color: var(--white-color);
+            margin-bottom: 24px;
+
+            @include portrait-phone {
+                font-size: 34px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        background-image: url(../images/lookbook/lookbook-02bg.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+
+        & img {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// LookBook 03
+.gm_lookbook03 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, row);
+    background: var(--color-background);
+
+    &>* {
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        padding: 60px 30px 60px 56px;
+        width: 47%;
+
+        @include large-screen {
+            padding: 40px 15px;
+        }
+
+        & h4 {
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+
+            @include portrait-phone {
+                font-size: 12px;
+                line-height: 19.2px;
+            }
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include portrait-phone {
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+
+        & p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+
+            @include screen-460 {
+                font-size: 15px;
+                line-height: 24px;
+                margin-bottom: 14px;
+            }
+        }
+    }
+
+    &__img {
+        width: 53%;
+        @include displayFlex(flex, end, bottom, row);
+        background-image: url(../images/lookbook/lookbook-03bg.png);
+        background-size: auto;
+        background-position: top 25px right 30px;
+        background-repeat: no-repeat;
+
+        & img {
+            max-width: 100%;
+        }
+
+    }
+
+    & .gm_primary-btn {
+        padding: 16px 20px 15px;
+        gap: 8px;
+        background: var(--secondary-color);
+        color: var(--white-color);
+
+        @include large-screen {
+            padding: 14px 20px 13px;
+            font-size: 16px;
+        }
+
+        @include portrait-phone {
+            padding: 10px 12px 9px;
+            font-size: 13px;
+
+            @include screen-460 {
+                font-size: 12px;
+                padding: 10px 10px 9px;
+            }
+
+        }
+
+        i {
+            padding: 1px .6px;
+        }
+
+        &::after {
+            background: var(--primary-bg-color);
+        }
+
+        &:hover {
+            color: var(--white-color);
+        }
+    }
+}
+
+// LookBook 04
+.gm_lookbook04 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, row);
+    background: var(--primary-bg-color);
+
+    &>* {
+        width: 50%;
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        padding: 40px;
+
+        @include large-screen {
+            padding: 40px 15px;
+        }
+
+        & h4 {
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25.2px;
+            letter-spacing: 0.05em;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+
+            @include portrait-phone {
+                font-size: 12px;
+                line-height: 19.2px;
+            }
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: var(--white-color);
+            text-transform: uppercase;
+            margin-bottom: 31px;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include portrait-phone {
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+    }
+
+    &__img {
+        @include displayFlex(flex, end, bottom, column);
+        background-image: url(../images/lookbook/lookbook-04-shape.png);
+        background-size: auto;
+        background-position: top right -1px;
+        background-repeat: no-repeat;
+
+        & img {
+            margin-right: 18px;
+        }
+
+    }
+
+    & .gm_primary-btn {
+        padding: 16px 20px 15px;
+        gap: 8px;
+        background: var(--color-background);
+
+        @include large-screen {
+            padding: 14px 20px 13px;
+            font-size: 16px;
+        }
+
+        @include portrait-phone {
+            padding: 10px 12px 9px;
+            font-size: 13px;
+
+        }
+
+        i {
+            padding: 1px .6px;
+        }
+
+        & .gm_btn_text {
+            color: var(--color-primary-button);
+        }
+
+        & .gm_btnShape {
+            background: var(--color-primary-button);
+        }
+
+        &:hover {
+            & .gm_btn_text {
+                color: var(--white-color);
+            }
+        }
+    }
+}
+
+// LookBook 05
+.gm_lookbook05 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, row);
+    background: #F7EFE9;
+
+    &>* {
+        width: 50%;
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        padding: 40px;
+
+        @include large-screen {
+            padding: 40px 15px;
+        }
+
+        & h4 {
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 25.2px;
+            letter-spacing: 0.05em;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+
+            @include portrait-phone {
+                font-size: 12px;
+                line-height: 19.2px;
+            }
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: var(--color-heading);
+            text-transform: uppercase;
+            margin-bottom: 31px;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include large-screen {
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            @include portrait-phone {
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+    }
+
+    &__img {
+        @include displayFlex(flex, center, bottom, row);
+        background-image: url(../images/lookbook/lookbook-05bg.png);
+        background-size: cover;
+        background-position: top right -1px;
+        background-repeat: no-repeat;
+
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+
+    }
+
+    & .gm_primary-btn {
+        padding: 16px 20px 15px;
+        gap: 8px;
+
+        @include large-screen {
+            padding: 14px 20px 13px;
+            font-size: 16px;
+        }
+
+        @include portrait-phone {
+            padding: 10px 12px 9px;
+            font-size: 13px;
+        }
+
+        i {
+            padding: 1px .6px;
+        }
+    }
+}
+
+// LookBook 06
+.gm_lookbook06 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, column);
+    background: var(--secondary-color);
+
+    &>* {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        padding: 32px 32px 14px;
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: var(--white-color);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include large-screen {
+                font-size: 32px;
+                line-height: 44px;
+            }
+        }
+    }
+
+    &__img {
+        @include displayFlex(flex, center, bottom, row);
+        background-image: url(../images/lookbook/lookbook-06-shape.png);
+        background-size: auto;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+
+    }
+
+    & .lookbookLink {
+        color: var(--white-color);
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: var(--white-color);
+            transform: 0.3s all;
+        }
+
+        &:hover {
+            color: var(--primary-color);
+
+            &:after {
+                background: var(--primary-color);
+            }
+        }
+    }
+}
+
+// LookBook 07
+.gm_lookbook07 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, column);
+    background: var(--primary-bg-color);
+    background-image: url(../images/lookbook/lookbook-07-shape.png);
+    background-size: auto;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    @include screen-1320 {
+        background-position: top -18px left -11px;
+    }
+
+    @include large-screen {
+        background-position: top -52px left -21px;
+    }
+
+    &>* {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        padding: 24px;
+
+        @include large-screen {
+            padding: 24px 15px;
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: var(--white-color);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            @include displayFlex(flex, center, center, row);
+            column-gap: 16px;
+            margin: 0;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include large-screen {
+                font-size: 27px;
+                line-height: 44px;
+            }
+        }
+    }
+
+    &__img {
+        @include displayFlex(flex, end, top, row);
+
+        @include screen-1320 {
+            padding-left: 15.1%;
+        }
+
+        & img {
+            max-width: 100%;
+            width: auto;
+            clip-path: polygon(32% 0%, 101% 0, 100% 31%, 79% 100%, 0 100%);
+        }
+
+    }
+
+    & .gm_primary-btn {
+        padding: 6px 13px 4px;
+        font-size: 16px;
+        line-height: 30px;
+
+        & .gm_btnShape {
+            background: var(--color-background);
+        }
+
+        &:hover {
+            & .gm_btn_text {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+// LookBook 08
+.gm_lookbook08 {
+    position: relative;
+    @include displayFlex(flex, start, stretch, column);
+    background: var(--primary-bg-color);
+    padding: 32px 32px;
+    background-image: url(../images/lookbook/lookbook-08-shape.png);
+    background-size: auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    &>* {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    &__content {
+        position: relative;
+
+        & h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 52px;
+            color: var(--white-color);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+
+            @include screen-1320 {
+                font-size: 35px;
+                line-height: 47px;
+            }
+
+            @include large-screen {
+                font-size: 27px;
+                line-height: 44px;
+            }
+        }
+    }
+
+    &__img {
+        @include displayFlex(flex, center, bottom, row);
+
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+
+    }
+
+    & .lookbookLink {
+        color: var(--white-color);
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            background: var(--white-color);
+            transform: 0.3s all;
+        }
+
+        &:hover {
+            color: var(--secondary-color);
+
+            &:after {
+                background: var(--secondary-color);
+            }
+        }
+    }
+}

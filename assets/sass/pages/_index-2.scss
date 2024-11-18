@@ -1,0 +1,161 @@
+// Countdown Timer 
+.gm_trainTimer {
+    padding: 56px 56px 38px;
+    background: var(--primary-bg-color);
+
+    @include large-screen {
+        padding: 27px 14px 25px;
+    }
+
+    @include screen-1200-to-1320 {
+        padding: 51px 30px 33px;
+    }
+
+    & h2 {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 73px;
+        text-align: center;
+        color: var(--white-color);
+        margin-bottom: 16px;
+        text-transform: uppercase;
+
+        @include large-screen {
+            font-size: 42px;
+            line-height: 60px;
+        }
+    }
+
+    & p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(255, 255, 255, .7);
+        margin-bottom: 32px;
+    }
+
+    & .gm_countdown {
+        @include screen-992 {
+            max-width: 355px;
+            margin: 0 auto;
+        }
+
+        & ul {
+            padding: 0;
+            background: var(--primary-bg-color);
+
+            & li {
+                background: var(--color-yellow);
+
+                @include large-screen {
+                    min-width: 66px;
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+
+                @include screen-460 {
+                    min-width: 64px;
+                    font-size: 28px;
+                    line-height: 40px;
+                }
+            }
+
+            & .gm_timerSeparator {
+                color: var(--color-yellow);
+                background: transparent;
+                padding: 14px 14.4px;
+
+                @include large-screen {
+                    padding: 14px 10px;
+                    min-width: 30px;
+                }
+
+                @include screen-460 {
+                    padding: 14px 7px;
+                    min-width: 22px;
+                }
+
+                & span {
+                    font-size: 31px;
+                    @include screen-460{
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Product Filter button 
+.gm_NewCollfilter_nav {
+    position: relative;
+    @include displayFlex(flex, end, center, row);
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+
+    @include screen-992 {
+        justify-content: start;
+    }
+
+    & li {
+        padding: 11px 23px;
+        border: 1px solid rgba(231, 231, 231, 1);
+        border-radius: unset;
+        background: var(--color-background);
+        cursor: pointer;
+        transition: var(--transition-base);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: var(--text-color);
+
+        &:hover {
+            background: var(--secondary-color);
+            color: var(--white-color);
+        }
+    }
+}
+
+// Offer Product 
+.gm_offerPd_deal {
+    overflow: hidden;
+}
+
+.gm_offerPd_pagin {
+    margin-top: 64px;
+    text-align: center;
+    @include displayFlex(flex, center, center, row);
+    gap: 18px;
+
+    & span {
+        border: 1px solid transparent;
+        width: 24px;
+        height: 24px;
+        border-radius: 0;
+        background: transparent;
+        position: relative;
+        opacity: 1;
+        margin: 0 !important;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: rgba(3, 21, 32, .5);
+        }
+    }
+
+    & span.swiper-pagination-bullet-active {
+        border-color: var(--secondary-color);
+
+        &::after {
+            background: var(--secondary-color);
+        }
+    }
+}

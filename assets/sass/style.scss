@@ -1,0 +1,63 @@
+/*
+Theme Name: Fitness & Gym - eCommerce HTML Template
+Author: WebritoTheme
+Author URI: https://themeforest.net/user/webritotheme
+Tags: fitness, gym, uroan, ecommerce, blog, fashion products, online shop, ecommerce store
+Description: Fitness & Gym - An eCommerce HTML5 Template
+Version: 1.1.0
+*/
+
+/************************************** base css **************************************/
+@import 'base/variables';
+@import 'base/mixin';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/spacing';
+
+
+/******************************* theme css **********************************/
+@import 'theme/theme-class';
+@import 'theme/preloader';
+@import 'theme/animations';
+
+
+/******************************** components ******************************/
+@import 'components/header';
+@import 'components/preloader';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/offcanvus';
+@import 'components/hero';
+@import 'components/icon-box';
+@import 'components/banner';
+@import 'components/our-service';
+@import 'components/product01';
+@import 'components/trending_pd';
+@import 'components/lookbook';
+@import 'components/collection';
+@import 'components/blog';
+@import 'components/newsletter';
+@import 'components/instagram';
+@import 'components/testimonial';
+@import 'components/brand';
+@import 'components/pagination';
+@import 'components/breadcrumb';
+@import 'components/sidebar';
+@import 'components/form';
+@import 'components/product-card';
+
+/****************************** page styles ******************************/
+@import 'pages/index-1';
+@import 'pages/index-2';
+@import 'pages/index-3';
+@import 'pages/about';
+@import 'pages/404';
+@import 'pages/blog';
+@import 'pages/product-single';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/contact';
+@import 'pages/faq';
+@import 'pages/product-details2';
+@import 'pages/shop';
+@import 'pages/wishlist';

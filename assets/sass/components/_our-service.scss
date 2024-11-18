@@ -1,0 +1,50 @@
+// Our Services 
+.gm_our_services {
+    position: relative;
+
+    &__image {
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+
+        & .img-one {
+            width: 470px;
+
+            @include large-screen {
+                padding-right: 30px;
+            }
+
+            & img {
+                @include screen-992 {
+                    max-width: 80%;
+                    width: 100%;
+                }
+
+                @include portrait-phone {
+                    max-width: 90%;
+                }
+            }
+        }
+
+        & .img-two {
+            position: absolute;
+            bottom: 60px;
+            right: 42px;
+
+            @include large-screen {
+                right: 0;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        &>p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+// News Letter 01
+.gm_newsLetter {
+    position: relative;
+}
+
+.subsCribe-form {
+    position: relative;
+
+    & .emailIntpu {
+        position: relative;
+        width: calc(100% - 237px);
+
+        svg {
+            position: absolute;
+            top: 25px;
+            left: 25.65px;
+        }
+
+        @include portrait-phone {
+            width: 100%;
+        }
+    }
+
+    & input[type="email"] {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 18px 18px 19px 64px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+        width: 100%;
+    }
+
+    & input[type="email"]::placeholder {
+        color: var(--color-placeholder);
+    }
+
+    & .form-group {
+        @include portrait-phone {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .form-group label {
+        position: relative;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .form-group label:before {
+        content: '';
+        -webkit-appearance: none;
+        background-color: transparent;
+        padding: 4px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        background-color: var(--color-background);
+        top: -1px;
+    }
+
+    .form-group input:checked+label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5.5px;
+        width: 7px;
+        height: 11px;
+        border: solid var(--secondary-color);
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .form-group input[type='checkbox'] {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+    }
+
+    button[type="submit"] {
+        color: var(--white-color);
+
+        & span.btn_icon {
+            height: 64px;
+        }
+
+        @include portrait-phone {
+            max-width: 229px;
+        }
+    }
+}
+
+.mainWidget_ft02 .subsCribe-form {
+    & .form-group {
+
+        @include portrait-phone {
+            flex-direction: row;
+            gap: 0px;
+        }
+    }
+
+    button[type='submit'] {
+        @include portrait-phone {
+            max-width: 56px;
+        }
+    }
+}
